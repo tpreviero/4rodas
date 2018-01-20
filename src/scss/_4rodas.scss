@@ -1,0 +1,229 @@
+@import './_base.scss';
+
+.p-relative {
+    position: relative;
+}
+
+.banner--super {
+    background-color: $cinza-claro;
+}
+
+.header {
+    background-color: $vermelho-destaque;
+    .banner--super {
+        &.active {
+            position: absolute;
+            top: 100%;
+        }
+    }
+    .header--container {
+        .header__logo {
+            @include media-breakpoint-up(md) {
+                width: 140px;
+            }
+            @include media-breakpoint-up(xl) {
+                width: 187px;
+            }
+        }
+        .header__nav {
+            .header__nav--ul {
+                li {
+                    a {
+                        @include media-breakpoint-up(md) {
+                            font-size: 1.1rem;
+                        }
+                        @include media-breakpoint-up(xl) {
+                            font-size: 1.4rem;
+                        }
+                        min-height: 79px;
+                        color: white;
+                        font-family: $dosis;
+                        letter-spacing: 0.009rem;
+                        font-weight: bold;
+                        &.arrow {
+                            background: url('../media/arrow-down.png') no-repeat calc(100% - 10px) center;
+                        }
+                        &.active {
+                            background-color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    form {
+        font-size: 0;
+        input[type=text],
+        .header__btn--submit {
+            height: 32px;
+        }
+        input[type=text] {
+            font-family: sans-serif;
+            font-size: 1.2rem;
+            width: 100px;
+            text-indent: 13px;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .header__btn--submit {
+            width: 32px;
+            background-color: white;
+        }
+    }
+    .header__dropdown {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: $black;
+        border-bottom: 2px solid $vermelho-destaque;
+        z-index: $zindex-dropdown;
+        td {
+            border: none;
+        }
+        .header__dropdown--btn,
+        a {
+            color: white;
+            font-family: $asap;
+            font-size: 1.5rem;
+        }
+        .header__dropdown--btn {
+            height: 30px;
+            line-height: 3rem;
+            padding: 0 25px;
+            background-color: $cinza-medio;
+            a {
+                font-weight: bold;
+            }
+        }
+        a {
+            font-weight: normal;
+            line-height: 2.5rem;
+        } // &.carros {}
+        &.testes {
+            color: white;
+            .testes__ul {
+                background-color: $cinza-medio;
+                li {
+                    display: inline;
+                    min-height: 33px;
+                    a {
+                        display: block;
+                        font-weight: bold;
+                        line-height: 3.3rem;
+                        padding-right: 20px;
+                        &.active {
+                            background: $black url('../media/arrow-right.png') no-repeat calc(100% - 5px) center;
+                        }
+                    }
+                }
+            }
+            .testes__destaques {
+                p {
+                    color: $vermelho-escuro;
+                    font-family: Arial, Helvetica, sans-serif;
+                    font-size: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+@include media-breakpoint-down(md) {
+    .header {
+        background-color: $vermelho-destaque;
+        z-index: $zindex-dropdown;
+        .header__logo {
+            padding: 12px 0;
+        }
+        .header__btn-menu {
+            width: 16px;
+            height: 16px;
+            padding: 10px;
+            background-image: url('../media/btn-hamburger.png');
+            background-position: center;
+            background-repeat: no-repeat;
+            &.active {
+                background-image: url('../media/btn-close.png') !important;
+            }
+        }
+        .header__btn-lupa,
+        .header__btn-menu {
+            background-color: transparent;
+            border: none;
+            &:focus {
+                box-shadow: none;
+            }
+        }
+        .header__nav {
+            position: absolute;
+            top: 100%;
+            background-color: $vermelho-destaque;
+            form {
+                padding: 10px 0;
+                input[type=text] {
+                    height: 24px;
+                    font-family: $dosis;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 5px;
+                }
+            }
+            .header__nav--menu {
+                li {
+                    height: 44px;
+                    border-top: 1px solid $vermelho-escuro;
+                    a {
+                        color: white;
+                        font-family: $dosis;
+                        font-size: 1.5rem;
+                        font-weight: bold;
+                        line-height: 4.4rem;
+                        text-indent: 1.5rem;
+                        background: url('../media/arrow-down.png') no-repeat calc(100% - 15px) center;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.mais-acessados {
+    color: white;
+    font-family: $dosis;
+    font-weight: bold;
+    line-height: 2.8rem;
+    background-color: $black;
+    .mais-acessados__titulo {
+        font-size: 1.4rem;
+        padding-right: 40px;
+        background: $vermelho-escuro url('../media/seta-mais-acessados.png') no-repeat right center;
+        sub {
+            font-size: 1.4rem;
+            bottom: 0;
+            margin-right: 2px;
+        }
+    }
+    .mais-acessados__nav {
+        li {
+            height: 28px;
+            a {
+                color: white;
+                font-size: 1.2rem;
+            }
+        }
+    }
+}
+
+main {
+    &.active::before {
+        content: " ";
+        z-index: 0;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: url('../media/cover.png');
+    }
+}
