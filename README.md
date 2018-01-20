@@ -11,9 +11,12 @@ cd 4rodas
 ### Dependencias
 ```console
 Apache server
-Downloads: https://httpd.apache.org/
-https://www.mamp.info/en/
 ```
+
+### Downloads
+https://httpd.apache.org/
+https://www.mamp.info/en/
+
 
 ### Produção
 https://quatrorodashome.herokuapp.com/
