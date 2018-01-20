@@ -11,7 +11,8 @@ cd 4rodas
 ### Dependencias
 ```console
 Apache server
-Download: https://httpd.apache.org/
+Downloads: https://httpd.apache.org/
+https://www.mamp.info/en/
 ```
 
 ### Produção
