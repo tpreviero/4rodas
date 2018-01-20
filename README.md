@@ -7,9 +7,11 @@
 git clone git@github.com:tpreviero/4rodas.git
 cd 4rodas
 ```
+
 ### Dependencias
 ```console
 Apache server
 Download: https://httpd.apache.org/
 ```
-Produção: https://quatrorodascrud.herokuapp.com/admin/
+
+Produção: https://quatrorodashome.herokuapp.com/
