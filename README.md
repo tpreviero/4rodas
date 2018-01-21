@@ -8,7 +8,7 @@ git clone git@github.com:tpreviero/4rodas.git
 cd 4rodas
 ```
 
-### Dependencias
+### Dependências
 ```console
 Apache server
 ```
